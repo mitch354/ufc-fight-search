@@ -12,9 +12,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Mitch H",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+  "node": "0.12.0"
+  }
 }
