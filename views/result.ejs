@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class = "container">
+    <div class = "page-header text-center">
+      <h1><%=data.Type + 's by ' + data.Move%></h1>
+    </div>
+    <table class = "table table-hover">
+      <thead>
+        <tr>
+          <th>Winner Name</th>
+          <th>Loser Name</th>
+          <th>Round</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+      <%var count = 0;%>
+      <%fightInfo.forEach(function(item){%>
+        <tr>
+          <% if(item.fighter1_is_winner) { %>
+            <td><%=item.fighter1_first_name + ' ' + item.fighter1_last_name %> </td>
+          <%} else {%>
+            <td><%=item.fighter2_first_name + ' ' + item.fighter2_last_name %> </td>
+          <%}%>
+          <% if(!item.fighter1_is_winner) { %>
+            <td><%=item.fighter1_first_name + ' ' + item.fighter1_last_name %> </td>
+          <%} else {%>
+            <td><%=item.fighter2_first_name + ' ' + item.fighter2_last_name %> </td>
+          <%}%>
+          <td> <%=item.result.EndingRound%> </td>
+          <td> <%=item.result.EndingTime%> </td>
+        </tr>
+        <%count+=1%>
+      <%})%>
+      </tbody>
+    </table>
+    <br>
+     <a href = "/"<button type="button" class="btn btn-default">New Search</button></a>
+  </div>
+</body>

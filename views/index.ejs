@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header text-center">
+      <h1>UFC Search By Finish</h1>
+    </div>
+      <div class="row">
+        <form method="POST" action="/">
+         <div class="col-sm-5">
+           <div class="form-group">
+             <label class="control-label " for="FinishType">Finish Type</label>
+              <select class="form-control" id="FinishType" name = "Type">
+                <option value="Submission">Submission</option>
+              </select>
+           </div>
+         </div>
+         <div class="col-sm-5">
+           <div class="form-group">
+             <label class="control-label " for="FinishMove">Finish Type</label>
+              <select class="form-control" id="FinishMove" name = "Move">
+                <option value="Anaconda Choke">Anaconda Choke</option>
+                <option value="Ankle Lock">Ankle Lock</option>
+                <option value="Armbar">Armbar</option>
+                <option value="Arm Triangle">Arm Triangle</option>
+                <option value="D'Arce Choke">D'Arce Choke</option>
+                <option value="Forearm Choke">Forearm Choke</option>
+                <option value="Gi Choke">Gi Choke</option>
+                <option value="Guillotine Choke">Guillotine Choke</option>
+                <option value="Heel Hook">Heel Hook</option>
+                <option value="Key Lock">Key Lock</option>
+                <option value="Kimura">Kimura</option>
+                <option value="Kneebar">Kneebar</option>
+                <option value="Omoplata">Omoplata</option>
+                <option value="Neck Crank">Neck Crank</option>
+                <option value="North-South Choke">North South Choke</option>
+                <option value="Peruvian Necktie">Peruvian Necktie</option>
+                <option value="Rear Naked Choke">Rear Naked Choke</option>
+                <option value="Toe Hold">Toe Hold</option>
+                <option value="Triangle Choke">Triangle Choke</option>
+              </select>
+           </div>
+         </div>
+         <div class="col-sm-2" style="margin-top: 1.8em">
+           <div class="form-group"> <!-- Submit button !-->
+             <button class="btn btn-primary" type="submit">Submit</button>
+           </div>
+         </div>
+       </form>
+      </div>
+  </div>
+</body>
+</html>
