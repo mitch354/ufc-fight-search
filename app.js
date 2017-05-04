@@ -6,6 +6,7 @@ var async = require('async');
 
 var app = express();
 app.set('view engine', 'ejs');
+app.set('port', (process.env.PORT || 3000));
 
 app.get('/', urlencondedParser, function(req, res){
   res.render('index');
@@ -47,4 +48,4 @@ app.post('/', urlencondedParser, function(req,res){
 });
 
 
-app.listen(3000);
+app.listen(app.get('port'));
